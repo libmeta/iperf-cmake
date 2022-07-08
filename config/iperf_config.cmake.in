@@ -5,7 +5,7 @@
 #cmakedefine HAVE_CLOCK_GETTIME 1
 
 /* Define to 1 if you have the `cpuset_setaffinity' function. */
-//#cmakedefine HAVE_CPUSET_SETAFFINITY 1
+#cmakedefine HAVE_CPUSET_SETAFFINITY 1
 
 /* Have CPU affinity support. */
 #cmakedefine HAVE_CPU_AFFINITY
