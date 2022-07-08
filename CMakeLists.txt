@@ -24,6 +24,7 @@ list(APPEND LIBIPERF_HDRS iperf/src/iperf_api.h)
 
 add_library(${PROJECT_NAME} STATIC ${LIBIPERF_SRCS})
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER ${LIBIPERF_HDRS})
+set_property(TARGET ${PROJECT_NAME} PROPERTY C_STANDARD 99)
 
 
 if(NOT iOS)
