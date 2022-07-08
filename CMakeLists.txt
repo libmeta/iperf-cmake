@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 project(iperf VERSION 3.11)
+if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
+    set(iOS TRUE)
+endif()
 
 include(cmake/configure.cmake)
 
@@ -22,12 +25,15 @@ list(APPEND LIBIPERF_HDRS iperf/src/iperf_api.h)
 add_library(${PROJECT_NAME} STATIC ${LIBIPERF_SRCS})
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER ${LIBIPERF_HDRS})
 
+
+if(NOT iOS)
 add_executable(iperf3 iperf/src/main.c)
 target_link_libraries(iperf3 ${PROJECT_NAME})
+install(TARGETS iperf3 RUNTIME DESTINATION bin)
+endif(NOT iOS)
 
 install(TARGETS ${PROJECT_NAME}
         ARCHIVE DESTINATION lib
         PUBLIC_HEADER DESTINATION include)
 
-install(TARGETS iperf3 RUNTIME DESTINATION bin)
 
