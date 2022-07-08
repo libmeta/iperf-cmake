@@ -1,3 +1,6 @@
 [submodule "iperf"]
 	path = iperf
 	url = https://github.com/esnet/iperf
+[submodule "ios-cmake"]
+	path = ios-cmake
+	url = https://github.com/leetal/ios-cmake.git
