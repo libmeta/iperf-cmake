@@ -3,3 +3,5 @@ build/
 *.[ao]
 *.sw[po]
 
+
+CMakeLists.txt.user
