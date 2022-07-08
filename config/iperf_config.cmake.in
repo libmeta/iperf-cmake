@@ -47,7 +47,7 @@
 #cmakedefine HAVE_SENDFILE 1
 
 /* Define to 1 if you have the `SetProcessAffinityMask' function. */
-//#cmakedefine HAVE_SETPROCESSAFFINITYMASK 1
+#cmakedefine HAVE_SETPROCESSAFFINITYMASK 1
 
 /* Have SO_MAX_PACING_RATE sockopt. */
 #cmakedefine HAVE_SO_MAX_PACING_RATE
